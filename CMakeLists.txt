@@ -19,7 +19,12 @@ find_package ( OpenCV REQUIRED )
 pkg_check_modules(pocolog_cpp pocolog_cpp)
 
 ## Main Project ##
-set ( ${PROJECT_NAME}_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/include CACHE INTERNAL "Rock Util Include Directory" FORCE )
+set (
+    ${PROJECT_NAME}_INCLUDE_DIR
+    ${PROJECT_SOURCE_DIR}/include
+    CACHE INTERNAL "Rock Util Include Directory"
+    FORCE
+)
 
 include_directories (
     ${rock_util_INCLUDE_DIR}
@@ -50,7 +55,7 @@ link_directories (
 boost_test_init()
 
 add_boost_test (
-    test_rock_util 
+    test_rock_util
     SOURCES test/test_rock_util.cpp
     LIBRARIES rock_util sonar_util ${Boost_LIBRARIES} ${OpenCV_LIBS} ${pocolog_cpp_LIBRARIES}
 )
