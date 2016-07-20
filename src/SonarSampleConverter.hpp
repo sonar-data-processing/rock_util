@@ -11,11 +11,11 @@ class SonarSampleConverter {
 
 public:
 
-    static cv::Mat convert2raw (const base::samples::SonarScan& sonar, 
-                                uint32_t frame_width = 512, uint32_t  = 512, 
+    static cv::Mat convert2raw (const base::samples::SonarScan& sonar,
+                                uint32_t frame_width = 512, uint32_t  = 512,
                                 sonar_util::color_palletes::PalleteType pallete_type = sonar_util::color_palletes::GRAY_PALLETE);
 
-    static cv::Mat convert2raw(const base::samples::Sonar& sonar, 
+    static cv::Mat convert2raw(const base::samples::Sonar& sonar,
                                uint32_t frame_width = 512, uint32_t frame_height = 512,
                                sonar_util::color_palletes::PalleteType pallete_type = sonar_util::color_palletes::GRAY_PALLETE);
 
@@ -41,7 +41,7 @@ public:
     static std::vector<int> generate_beam_mapping_from_cartesian(const base::samples::Sonar& sonar,
                                                                  int frame_width,
                                                                  int frame_height);
-                                                                 
+
 };
 
 } /* namespace rock_util */

@@ -22,27 +22,27 @@ public:
     bool next(T& sample) {
         return read_sample<T>(sample, current_sample_index_++);
     }
-    
+
     void reset() {
         current_sample_index_ = 0;
     }
-    
+
     size_t total_samples() {
         return data_stream_->getSize();
     }
-    
+
     size_t current_sample_index() {
         return current_sample_index_;
     }
 
-    LogStream() 
-        : data_stream_(NULL) 
+    LogStream()
+        : data_stream_(NULL)
     {
     }
 
 private:
 
-    LogStream(pocolog_cpp::InputDataStream *data_stream) 
+    LogStream(pocolog_cpp::InputDataStream *data_stream)
         : data_stream_(data_stream)
         , current_sample_index_(0) {
     }
@@ -75,7 +75,7 @@ public:
 
 private:
 
-    pocolog_cpp::LogFile log_file_; 
+    pocolog_cpp::LogFile log_file_;
 };
 
 }

@@ -6,6 +6,8 @@ include ( "${WORKSPACE_DIR}/base/cmake/Dependencies.cmake"  )
 add_project_dependency (base       ${WORKSPACE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
 add_project_dependency (sonar_util ${WORKSPACE_DIR} ${CMAKE_CURRENT_BINARY_DIR})
 
+setup_headers ( ${PROJECT_NAME} "${CMAKE_CURRENT_SOURCE_DIR}/src" )
+
 set ( CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake" )
 
 include ( FindRock )
@@ -21,7 +23,8 @@ pkg_check_modules(pocolog_cpp pocolog_cpp)
 ## Main Project ##
 set (
     ${PROJECT_NAME}_INCLUDE_DIR
-    ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_SOURCE_DIR}/src
+    ${CMAKE_BINARY_DIR}/include
     CACHE INTERNAL "Rock Util Include Directory"
     FORCE
 )
@@ -51,7 +54,6 @@ link_directories (
 )
 
 ## Unit Tests ##
-
 boost_test_init()
 
 add_boost_test (
