@@ -1,8 +1,8 @@
 #include <cmath>
-#include "sonar_util/Converter.hpp"
-#include "rock_util/SonarSampleConverter.hpp"
-#include "rock_util/Utilities.hpp"
-#include "base/MathUtil.hpp"
+#include <sonar_util/Converter.hpp>
+#include <base/MathUtil.hpp>
+#include "Utilities.hpp"
+#include "SonarSampleConverter.hpp"
 
 using namespace sonar_util;
 using namespace base;
@@ -43,7 +43,7 @@ std::vector<int> SonarSampleConverter::generate_beam_mapping(const base::samples
 }
 
 std::vector<int> SonarSampleConverter::generate_beam_mapping_from_cartesian(const base::samples::Sonar& sonar, int frame_width, int frame_height) {
-    return Converter::generate_beam_mapping_from_cartesian(sonar.bins, Utilities::get_radians(sonar.bearings), sonar.bin_count, sonar.beam_count, frame_width, frame_height);
+    return Converter::generate_beam_mapping_from_cartesian(Utilities::get_radians(sonar.bearings), sonar.bin_count, sonar.beam_count, frame_width, frame_height);
 }
 
 }

@@ -5,8 +5,8 @@
 #include <fstream>
 #include <base/samples/SonarScan.hpp>
 #include <base/samples/Sonar.hpp>
-#include "rock_util/LogReader.hpp"
-#include "base/test_config.h"
+#include <base/test_config.h>
+#include "LogReader.hpp"
 
 BOOST_AUTO_TEST_CASE(read_and_write_log_files)
 {    

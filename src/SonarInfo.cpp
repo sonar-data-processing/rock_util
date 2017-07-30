@@ -1,4 +1,4 @@
-#include "rock_util/SonarInfo.hpp"
+#include "SonarInfo.hpp"
 
 namespace rock_util {
 
