@@ -21,11 +21,16 @@ include_directories (
     ${CMAKE_INSTALL_PREFIX}/include/sonar_toolkit
 )
 
+link_directories (
+    ${CMAKE_INSTALL_PREFIX}/lib/
+    ${CMAKE_INSTALL_PREFIX}/lib/sonar_toolkit
+)
+
 file ( GLOB SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp )
 file ( GLOB HEADERS ${PROJECT_SOURCE_DIR}/src/*.hpp )
 
 add_library (
-    rock_util STATIC
+    rock_util SHARED
     ${SOURCES}
 )
 

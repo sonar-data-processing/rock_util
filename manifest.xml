@@ -5,4 +5,5 @@
     <author>Gustavo Neves/gustavo.neves12@gmail.com</author>
     <depend package="tools/pocolog_cpp" />
     <depend package="sonar_toolkit/base" />
+    <depend package="sonar_toolkit/sonar_util" />
 </package>
