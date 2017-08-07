@@ -35,6 +35,10 @@ public:
         return current_sample_index_;
     }
 
+    void set_current_sample_index(size_t index) {
+        current_sample_index_ = index;
+    }
+
     LogStream()
         : data_stream_(NULL)
     {
