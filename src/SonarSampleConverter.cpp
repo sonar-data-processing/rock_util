@@ -1,6 +1,6 @@
 #include <cmath>
 #include <sonar_util/Converter.hpp>
-#include <base/MathUtil.hpp>
+#include <sonar_processing/MathUtil.hpp>
 #include "Utilities.hpp"
 #include "SonarSampleConverter.hpp"
 

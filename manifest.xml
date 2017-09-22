@@ -6,4 +6,5 @@
     <depend package="tools/pocolog_cpp" />
     <depend package="sonar_toolkit/base" />
     <depend package="sonar_toolkit/sonar_util" />
+    <depend package="sonar_toolkit/sonar_processing" />
 </package>
