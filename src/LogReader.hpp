@@ -1,6 +1,7 @@
 #ifndef LogReader_hpp
 #define LogReader_hpp
 
+#include <cstring>
 #include <string>
 #include <pocolog_cpp/LogFile.hpp>
 #include <pocolog_cpp/InputDataStream.hpp>
